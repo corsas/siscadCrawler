@@ -26,7 +26,6 @@ func Run() {
 	gradeList := getGradesURL(&c, util.GradesURL, util.GradesSelector)
 
 	for _, v := range gradeList {
-		getGrades(&c, util.Host+v, util.IndividualGradeSelector, util.SubjectNameSelector)
 		results = append(results, getGrades(&c, util.Host+v, util.IndividualGradeSelector, util.SubjectNameSelector))
 	}
 
